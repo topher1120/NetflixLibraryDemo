@@ -4,7 +4,7 @@ apply plugin: 'idea'
 
 //buildDir = 'target'
 
-applicationName = "archaiusSample"
+applicationName = "netflixLibrarySample"
 sourceCompatibility = 1.7
 targetCompatibility = 1.7
 
@@ -20,4 +20,5 @@ dependencies{
     compile 'com.sun.jersey:jersey-core:1.14'
     compile 'com.sun.jersey:jersey-json:1.14'
     compile 'ch.qos.logback:logback-classic:1.0.7'
+    testCompile 'junit:junit:4.11'
 }
