@@ -1,7 +1,7 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html ng-app="netflixApp">
   <head>
-    <title>Archaius Sample</title>
+    <title>Netflix Sample</title>
     <script src="js/lib/angular-1.0.4.js"></script>
     <script src="js/lib/angular-bootstrap-1.0.4.js"></script>
     <script src="js/lib/angular-resource-1.0.4.js"></script>
@@ -10,15 +10,18 @@
   <body>
       <div class="navbar">
           <div class="navbar-inner">
-              <a class="brand" href="#">Archaius Sample</a>
+              <a class="brand" href="#">Netflix Sample</a>
+              <ul class="nav">
+                  <li class="active"><a href="#">Archaius</a></li>
+              </ul>
           </div>
       </div>
       <div class="container-fluid">
-          <div class="row-fluid">
-              <div class="span10 offset1">
-                  <h1>item.sampleName:</h1>
-              </div>
-          </div>
+        <div class="row-fluid">
+            <div class="span10 offset1" ng-view></div>
+        </div>
       </div>
+      <script src="js/app.js" type="text/javascript"></script>
+      <script src="js/controllers.js" type="text/javascript"></script>
   </body>
 </html>
