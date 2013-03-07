@@ -20,5 +20,11 @@ dependencies{
     compile 'com.sun.jersey:jersey-core:1.14'
     compile 'com.sun.jersey:jersey-json:1.14'
     compile 'ch.qos.logback:logback-classic:1.0.7'
+
+    //netflix libraries
+    compile 'com.netflix.archaius:archaius-core:0.5.6'
+
+    //test libraries
     testCompile 'junit:junit:4.11'
+    testCompile 'org.mockito:mockito-core:1.9.5'
 }
