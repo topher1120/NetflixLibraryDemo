@@ -23,6 +23,7 @@ dependencies{
 
     //netflix libraries
     compile 'com.netflix.archaius:archaius-core:0.5.6'
+    compile 'com.netflix.servo:servo-core:0.4.32'
 
     //test libraries
     testCompile 'junit:junit:4.11'
