@@ -2,9 +2,6 @@ apply plugin: 'war'
 apply plugin: 'eclipse'
 apply plugin: 'idea'
 
-//buildDir = 'target'
-
-applicationName = "netflixLibrarySample"
 sourceCompatibility = 1.7
 targetCompatibility = 1.7
 
