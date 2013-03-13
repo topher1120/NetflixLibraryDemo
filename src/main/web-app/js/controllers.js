@@ -14,3 +14,10 @@ function ArchaiusCtrl($scope, $http) {
     };
 }
 //ArchaiusCtrl.$inject = ['$scope', '$http'];
+
+function HystrixCtrl($scope, $http) {
+    $scope.result = {
+        "status": "info",
+        "value": "No result"
+    };
+}
