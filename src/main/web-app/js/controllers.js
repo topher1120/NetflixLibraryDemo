@@ -20,4 +20,23 @@ function HystrixCtrl($scope, $http) {
         "status": "info",
         "value": "No result"
     };
+
+    $scope.sendHystrixRequest = function(requestType){
+        $http.get("/ws/hystrix?type="+requestType).success(function(data){
+            $scope.result = data;
+        });
+
+    }
+
+    $scope.normalRequest = function(){
+        $scope.sendHystrixRequest("normal");
+    }
+
+    $scope.failedRequest = function(){
+        $scope.sendHystrixRequest("fail");
+    }
+
+    $scope.delayedRequest = function(){
+        $scope.sendHystrixRequest("delay");
+    }
 }
