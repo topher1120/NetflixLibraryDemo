@@ -1,5 +1,10 @@
 'use strict';
 
+// controller for navigation section.  Think I need this to make the AngularStrap nav stuff work.
+function NavCtrl($scope, $location){
+    $scope.location = $location;
+}
+// NavCtrl.$inject = ['$scope', '$location']
 function ArchaiusCtrl($scope, $http) {
     $scope.checkCount = 0;
     $scope.archTimer = setInterval(function(){
