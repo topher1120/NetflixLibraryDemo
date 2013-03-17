@@ -1,11 +1,6 @@
 'use strict';
-
-// controller for navigation section.  Think I need this to make the AngularStrap nav stuff work.
-function NavCtrl($scope, $location){
-    $scope.location = $location;
-}
-// NavCtrl.$inject = ['$scope', '$location']
 function ArchaiusCtrl($scope, $http) {
+    'use strict';
     $scope.checkCount = 0;
     $scope.archTimer = setInterval(function(){
         $http.get("/ws/archaius").success(function(data){
@@ -21,6 +16,7 @@ function ArchaiusCtrl($scope, $http) {
 //ArchaiusCtrl.$inject = ['$scope', '$http'];
 
 function HystrixCtrl($scope, $http) {
+    'use strict';
     $scope.result = {
         "status": "info",
         "value": "No result"
@@ -30,7 +26,6 @@ function HystrixCtrl($scope, $http) {
         $http.get("/ws/hystrix?type="+requestType).success(function(data){
             $scope.result = data;
         });
-
     }
 
     $scope.normalRequest = function(){
@@ -45,3 +40,4 @@ function HystrixCtrl($scope, $http) {
         $scope.sendHystrixRequest("delay");
     }
 }
+//HystrixCtrl.$inject = ['$scope', '$http'];
