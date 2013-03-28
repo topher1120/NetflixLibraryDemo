@@ -5,9 +5,8 @@
             <button class="btn btn-large" ng-click="failedRequest();">Failed Response</button>
             <button class="btn btn-large" ng-click="delayedRequest();">Slow Response</button>
         </div>
-        <div class="alert alert-{{result.status}}">
-            <h2>Request result: {{result.value}}</h2>
+        <div class="alerts">
+            <div class="alert  fade hystrix-alert-large" ng-repeat="alert in alerts" bs-alert="alert"></div>
         </div>
-
     </div>
 </div>

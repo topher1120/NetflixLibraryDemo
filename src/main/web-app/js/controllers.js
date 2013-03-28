@@ -17,14 +17,12 @@ function ArchaiusCtrl($scope, $http) {
 
 function HystrixCtrl($scope, $http) {
     'use strict';
-    $scope.result = {
-        "status": "info",
-        "value": "No result"
-    };
+
+    $scope.alerts = [];
 
     $scope.sendHystrixRequest = function(requestType){
         $http.get("/ws/hystrix?type="+requestType).success(function(data){
-            $scope.result = data;
+            $scope.alerts.push(data);
         });
     }
 

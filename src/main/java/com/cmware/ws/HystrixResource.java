@@ -90,8 +90,8 @@ public class HystrixResource {
 
         private Map<String, String> buildResult(String status, String value) {
             Map<String, String> result = new HashMap<String, String>();
-            result.put("status", status);
-            result.put("value", value);
+            result.put("type", status);
+            result.put("content", value);
             return result;
         }
     }
