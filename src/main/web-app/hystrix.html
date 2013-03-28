@@ -1,12 +1,13 @@
 <div class="row-fluid">
     <div class="span10 offset1">
-        <div class="alert alert-{{result.status}}">
-            <h2>Request result: {{result.value}}</h2>
-        </div>
-        <div>
+        <div class="hystrix-buttons">
             <button class="btn btn-large" ng-click="normalRequest();">Normal Response</button>
             <button class="btn btn-large" ng-click="failedRequest();">Failed Response</button>
             <button class="btn btn-large" ng-click="delayedRequest();">Slow Response</button>
         </div>
+        <div class="alert alert-{{result.status}}">
+            <h2>Request result: {{result.value}}</h2>
+        </div>
+
     </div>
 </div>
